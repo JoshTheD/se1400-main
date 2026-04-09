@@ -125,3 +125,54 @@ footer {
     font-size: 2rem;
     font-weight: 400;
 }
+
+@media only screen and (max-width: 768px) {
+    .header-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tagline {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    nav a {
+        margin-left: 15px;
+        font-size: 0.8rem;
+    }
+
+    .hero {
+        height: 200px;
+        padding-left: 20px;
+    }
+
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .cta-link {
+        font-size: 1.5rem;
+    }
+
+    .intro p {
+        font-size: 1.5rem;
+    }
+
+    .options-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 20px 60px;
+    }
+
+    .option-card {
+        width: 100%;
+        height: auto;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
