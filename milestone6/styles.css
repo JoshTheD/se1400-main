@@ -104,131 +104,163 @@ nav a {
     padding: 10%;
 }
 
+.option-card {
+    background-color: #d3d3d3;
+    width: 250px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+footer {
+    padding: 0 40px 60px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.footer-content a {
+    text-decoration: none;
+    color: #000;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+/* Responsive Styles */
+
+.transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.transition-row {
+    flex: 1;
+    display: flex;
+}
+
+.transition-row.row-1 .block {
+    transform-origin: top;
+}
+
+.transition-row.row-2 .block {
+    transform-origin: bottom;
+}
+
+.block {
+    flex: 1;
+    background-color: #d4af37;
+    transform: scaleY(1);
+    will-change: transform;
+}
+
+/* Style for tablet screens - 992px and below */
+@media (max-width: 992px) {
+    .options-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero {
+        padding-left: 30px;
+        height: 250px;
+    }
+
     .option-card {
-        background-color: #d3d3d3;
-        width: 250px;
-        height: 300px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 20px;
-        font-size: 1.2rem;
+        width: 100%;
+        height: auto;
     }
 
-    footer {
-        padding: 0 40px 60px;
+    .options-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 20px;
+        padding: 40px 10%;
+    }
+}
+
+/* Style for phone screens - 768px and below */
+@media (max-width: 768px) {
+    .header-top {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
     }
 
-    .footer-content {
-        display: flex;
-        justify-content: space-between;
+    .options-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .option-card {
+        width: 100%;
         align-items: center;
-        padding-top: 60px;
+    }
+
+    .divider-bottom {
+        display: none;
     }
 
     .footer-content a {
+        flex-direction: column;
+        gap: 20px;
+        align-content: center;
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        padding: 20px;
+        height: 200px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* hide popular options 4 - 6 */
+    #popular-4 {
+        display: none;
+    }
+
+    #popular-5 {
+        display: none;
+    }
+
+    #popular-6 {
+        display: none;
+    }
+
+    nav a {
         text-decoration: none;
         color: #000;
-        font-size: 2rem;
-        font-weight: 400;
+        margin-left: 10%;
+        font-family: 'Lato', sans-serif;
+        font-size: 0.8rem;
+        text-transform: lowercase;
     }
 
-    /* Responsive Styles */
-
-    /* Style for tablet screens - 992px and below */
-    @media (max-width: 992px) {
-        .options-container {
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .hero {
-            padding-left: 30px;
-            height: 250px;
-        }
-
-        .option-card {
-            width: 100%;
-            height: auto;
-        }
-
-        .options-container {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(3, 1fr);
-            gap: 20px;
-            padding: 40px 10%;
-        }
+    .tagline {
+        font-size: 1rem;
+        margin-bottom: 10px;
+        text-align: center;
     }
 
-    /* Style for phone screens - 768px and below */
-    @media (max-width: 768px) {
-        .header-top {
-            flex-direction: column;
-            gap: 10px;
-            align-items: center;
-        }
-
-        .options-container {
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .option-card {
-            width: 100%;
-            align-items: center;
-        }
-
-        .divider-bottom {
-            display: none;
-        }
-
-        .footer-content a {
-            flex-direction: column;
-            gap: 20px;
-            align-content: center;
-            font-size: 0.9rem;
-        }
-
-        .hero {
-            padding: 20px;
-            height: 200px;
-            justify-content: center;
-            text-align: center;
-        }
-
-        /* hide popular options 4 - 6 */
-        #popular-4 {
-            display: none;
-        }
-
-        #popular-5 {
-            display: none;
-        }
-
-        #popular-6 {
-            display: none;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #000;
-            margin-left: 10%;
-            font-family: 'Lato', sans-serif;
-            font-size: 0.8rem;
-            text-transform: lowercase;
-        }
-
-        .tagline {
-            font-size: 1rem;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
+    nav {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
     }
+}
